@@ -21,6 +21,7 @@
       <section
         class="w-[60%] mx-auto"
       >
+      <h1 class="text-center text-stone-950 text-[35px] font-semibold">Search your phone</h1>
         <div class="my-4 w-full bg-stone-950 bg-opacity-5 rounded-lg flex justify-between">
           <input
             id="search-field"
@@ -32,9 +33,6 @@
             Search
           </button>
         </div>
-        <!-- another search field -->
-        <!-- <input type="text" id="search-field2" placeholder="Search here" class="input input-bordered w-full max-w-xs" />
-            <button onclick="handleSearch2()" class="btn btn-active btn-primary">Search</button> -->
       </section>
       <!-- All cards -->
       <section>
@@ -42,8 +40,13 @@
           id="card-container"
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         ></div>
+        <!-- show all button -->
+        <div class="mx-auto w-fit">
+          <button id="show-all-btn" class="bg-[#0D6EFD] btn px-9 text-white font-bold hover:bg-[#376bb8] my-8 hidden">
+            Show all
+          </button>
+        </div>
       </section>
-
       <!-- search result -->
       <section>
         <!-- spinner or loader -->

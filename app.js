@@ -9,8 +9,15 @@ const loadPhone = async (searchPhone) => {
 const phones = function (phone) {
     const phoneCardContainer = document.getElementById('card-container');
     phoneCardContainer.innerText = '';    
+    
+    const showAllButton = document.getElementById('show-all-btn');
+    if (phone.length > 12) {
+        showAllButton.classList.remove('hidden');
+    } else {
+        showAllButton.classList.add('hidden');
+    }
+    
     phone = phone.slice(0, 12);
-
     phone.forEach(element => {
         const phoneDiv = document.createElement('div');
         phoneDiv.classList = 'card bg-white rounded-lg border border-stone-300';
@@ -26,7 +33,7 @@ const phones = function (phone) {
             <h2 class="card-title">${element.phone_name}</h2>
             <p class="my-5 md:w-[80%]">There are many variations of passages of available, but the majority have suffered</p>
             <div class="card-actions">
-            <button class="btn btn-primary">Show Details</button>
+            <button class="btn btn-primary bg-[#0D6EFD]">Show Details</button>
             </div>
         </div>
         `;
