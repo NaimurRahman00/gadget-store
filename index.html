@@ -17,26 +17,31 @@
       <h2 class="text-6xl">Hunting Phone</h2>
     </header>
     <main class="container mx-auto mt-8">
-      <!-- All cards -->
-      <section>
-        <div id="card-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Search bar -->
+      <section
+        class="w-[60%] mx-auto"
+      >
+        <div class="my-4 w-full bg-stone-950 bg-opacity-5 rounded-lg flex justify-between">
+          <input
+            id="search-field"
+            type="text"
+            placeholder="Search your phone"
+            class="input w-full max-w-2xl bg-transparent bg-opacity-5 rounded-lg focus:outline-none"
+          />
+          <button onclick="handleSearch()" class="bg-[#0D6EFD] btn px-9 text-white font-bold hover:bg-[#376bb8]">
+            Search
+          </button>
         </div>
-      </section>
-
-
-
-
-      <section class="bg-gray-100 p-4 m-4">
-        <input
-          id="search-field"
-          type="text"
-          placeholder="search..."
-          class="input input-bordered w-full max-w-xs"
-        />
-        <button onclick="handleSearch()" class="btn btn-accent">Search</button>
         <!-- another search field -->
         <!-- <input type="text" id="search-field2" placeholder="Search here" class="input input-bordered w-full max-w-xs" />
             <button onclick="handleSearch2()" class="btn btn-active btn-primary">Search</button> -->
+      </section>
+      <!-- All cards -->
+      <section>
+        <div
+          id="card-container"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        ></div>
       </section>
 
       <!-- search result -->
