@@ -20,7 +20,9 @@
           <a class="btn btn-ghost text-xl font-bold">Hot Gadgets</a>
         </div>
         <div class="navbar-end">
-          <a class="bg-[#0D6EFD] text-white font-bold hover:bg-[#3d6db5] btn">Sign Up</a>
+          <a class="bg-[#0D6EFD] text-white font-bold hover:bg-[#3d6db5] btn"
+            >Sign Up</a
+          >
         </div>
       </div>
     </header>
@@ -56,6 +58,7 @@
         >
           <span class="loading loading-spinner loading-lg"></span>
         </div>
+        <!-- card -->
         <div
           id="card-container"
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -69,6 +72,27 @@
             Show all
           </button>
         </div>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <h3 id="mobile-name" class="font-bold text-lg">Hello!</h3>
+            <p class="py-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            <p> <span class="text-neutral-700 text-xl font-semibold">Storage : </span><span id="mobile-storage"></span></p>
+            <p> <span class="text-neutral-700 text-xl font-semibold">Display size : </span><span id="mobile-display"></span></p>
+            <p> <span class="text-neutral-700 text-xl font-semibold">Chipset : </span><span id="mobile-chipset"></span></p>
+            <p> <span class="text-neutral-700 text-xl font-semibold">Memory : </span><span id="mobile-mamory"></span></p>
+            <p> <span class="text-neutral-700 text-xl font-semibold">Slug : </span><span id="mobile-slug"></span></p>
+            <p> <span class="text-neutral-700 text-xl font-semibold">Release data : </span><span id="mobile-release"></span></p>
+            <p> <span class="text-neutral-700 text-xl font-semibold">Brand : </span><span id="mobile-brand"></span></p>
+            <p> <span class="text-neutral-700 text-xl font-semibold">GPS : </span><span id="mobile-gps"></span></p>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </section>
       <!-- search result -->
       <section>
