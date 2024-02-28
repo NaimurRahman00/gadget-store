@@ -14,35 +14,58 @@
 
   <body class="w-[95%] sm:w-[90%] md:w-[80%] mx-auto">
     <header>
-      <h2 class="text-6xl">Hunting Phone</h2>
+      <!-- Navbar -->
+      <div class="navbar bg-base-100 pt-5">
+        <div class="navbar-start">
+          <a class="btn btn-ghost text-xl font-bold">Hot Gadgets</a>
+        </div>
+        <div class="navbar-end">
+          <a class="bg-[#0D6EFD] text-white font-bold hover:bg-[#3d6db5] btn">Sign Up</a>
+        </div>
+      </div>
     </header>
     <main class="container mx-auto mt-8">
       <!-- Search bar -->
-      <section
-        class="w-[60%] mx-auto"
-      >
-      <h1 class="text-center text-stone-950 text-[35px] font-semibold">Search your phone</h1>
-        <div class="my-4 w-full bg-stone-950 bg-opacity-5 rounded-lg flex justify-between">
+      <section class="w-[60%] mx-auto">
+        <h1 class="text-center text-stone-950 text-[35px] font-semibold">
+          Search your phone
+        </h1>
+        <div
+          class="my-4 w-full bg-stone-950 bg-opacity-5 rounded-lg flex justify-between"
+        >
           <input
             id="search-field"
             type="text"
             placeholder="Search your phone"
             class="input w-full max-w-2xl bg-transparent bg-opacity-5 rounded-lg focus:outline-none"
           />
-          <button onclick="handleSearch()" class="bg-[#0D6EFD] btn px-9 text-white font-bold hover:bg-[#376bb8]">
+          <button
+            onclick="handleSearch()"
+            class="bg-[#0D6EFD] btn px-9 text-white font-bold hover:bg-[#376bb8]"
+          >
             Search
           </button>
         </div>
       </section>
       <!-- All cards -->
       <section>
+        <!-- loader -->
+        <div
+          id="loading-spinner"
+          class="mx-auto w-fit h-[50vh] flex items-center"
+        >
+          <span class="loading loading-spinner loading-lg"></span>
+        </div>
         <div
           id="card-container"
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         ></div>
         <!-- show all button -->
         <div class="mx-auto w-fit">
-          <button id="show-all-btn" class="bg-[#0D6EFD] btn px-9 text-white font-bold hover:bg-[#376bb8] my-8 hidden">
+          <button
+            id="show-all-btn"
+            class="bg-[#0D6EFD] btn px-9 text-white font-bold hover:bg-[#376bb8] my-8 hidden"
+          >
             Show all
           </button>
         </div>
