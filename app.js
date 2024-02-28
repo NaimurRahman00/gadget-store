@@ -2,7 +2,6 @@ const loadPhone = async (searchPhone) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchPhone}`);
     const data = await res.json();
     const phone = data.data;
-
     phones(phone);
 }
 
@@ -39,11 +38,23 @@ const phones = function (phone) {
         `;
         phoneCardContainer.appendChild(phoneDiv);
     });
+    loadingToggoler(false);
 }
 
 // Handle search
 const handleSearch = () => {
+    loadingToggoler(true);
     const searchInput = document.getElementById('search-field');
     const inputValue = searchInput.value;
     loadPhone(inputValue);
+}
+
+// loading spinner
+const loadingToggoler = toggleValue => {
+    const loadingSpinner = document.getElementById('loading-spinner');
+    if (toggleValue) {
+        loadingSpinner.classList.remove('hidden');
+    } else {
+        loadingSpinner.classList.add('hidden');
+    }
 }
