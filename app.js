@@ -43,6 +43,13 @@ const phones = function (phone) {
 
 // show details modal
 const showDetailsModal = (phoneDetails) => {
+    console.log(phoneDetails);
+    const mobileImage = document.getElementById('modal-image');
+    mobileImage.innerHTML = '';
+    const img = document.createElement('img');
+    img.setAttribute("src", `${phoneDetails.image}`);
+    mobileImage.appendChild(img);
+
     const mobileName = document.getElementById('mobile-name');
     mobileName.innerText = phoneDetails.name;
     const mobileStorage = document.getElementById('mobile-storage');
